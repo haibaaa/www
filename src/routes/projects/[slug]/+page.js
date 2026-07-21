@@ -20,8 +20,11 @@ export async function load({ params }) {
 		throw error(404, 'project not found');
 	}
 
-	let imagePath = match.path.split('/').slice(0, -1).join('/') + '/' + post.metadata.images[0];
-	let image = await importOgImage(imagePath);
+	let image;
+	if (post.metadata.images?.length) {
+		let imagePath = match.path.split('/').slice(0, -1).join('/') + '/' + post.metadata.images[0];
+		image = await importOgImage(imagePath);
+	}
 
 	return {
 		post,
@@ -29,7 +32,7 @@ export async function load({ params }) {
 			title: post.metadata.name,
 			description: post.metadata.description,
 			type: 'article',
-			image
+			...(image && { image })
 		}
 	};
 }

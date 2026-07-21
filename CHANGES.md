@@ -260,5 +260,34 @@ Updated project overview and removed references to deleted content.
 ## Content Added
 
 - **`src/content/projects/0trace/`**: NIST-compliant bootable ISO for secure disk wiping
-- **`src/content/projects/lisa/`**: Lightweight remote config/feature flag service
+- **`src/content/projects/lisa/`**: Lightweight remote config/feature flag service with Mona CLI and lisa-demo
 - **`src/content/projects/tccs/`**: Backend web app with jOOQ/PostgreSQL
+- **`src/content/projects/surge-website/`**: Official Surge 2025 fest website (contributed as backend developer)
+- **`src/content/projects/bombsquad/`**: Minesweeper solver with TUI and CSP algorithms
+
+## Content Updated
+
+### `src/content/projects/lisa/+lisa.md`
+Expanded to cover full Lisa ecosystem including Mona CLI and lisa-demo application. Added links to all three repos, updated tech stack with React, Vite, Click.
+
+### `src/content/projects/0trace/+0trace.md`
+Enhanced with detailed process flow, certificate generation details, and QR code verification feature. Updated tech stack.
+
+### `src/content/projects/tccs/+tccs.md`
+Added GitHub link, expanded features list with logistics domain details (consignment, truck allocation, dispatch), added Maven to tech stack.
+
+## Thumbnails
+
+- **lisa**: Placeholder thumbnail generated (3.8KB → 3.9KB)
+- **tccs**: Placeholder thumbnail generated (3.8KB → 4.0KB)
+- **surge-website**: Downloaded from repo screenshot (489KB)
+
+## Images Hidden
+
+All images and thumbnails removed from projects. The codebase now conditionally handles missing images:
+- Project listing page hides thumbnail when absent
+- Project detail page hides carousel when no images
+- OG image generation skipped when no images
+- Removed `thumbnail` and `images` fields from all project frontmatter
+- Removed `CaptionImage` imports from project markdown files
+- To add images later: place `thumbnail.png` in project directory and add `thumbnail: thumbnail.png` and `images: [thumbnail.png]` to frontmatter

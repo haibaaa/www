@@ -13,14 +13,16 @@
 	<div class="posts">
 		{#each data.posts as post, index}
 			<a href={'/projects/' + post.slug} class="link">
-				<Image
-					image={post.thumbnail}
-					alt={post.description}
-					sizes="(min-width: 1200px) 50vw, 100vw"
-					loading={index < 6 ? 'eager' : 'lazy'}
-					fetchpriority={index < 3 ? 'high' : 'auto'}
-					--aspect-ratio="16/9"
-				/>
+				{#if post.thumbnail}
+					<Image
+						image={post.thumbnail}
+						alt={post.description}
+						sizes="(min-width: 1200px) 50vw, 100vw"
+						loading={index < 6 ? 'eager' : 'lazy'}
+						fetchpriority={index < 3 ? 'high' : 'auto'}
+						--aspect-ratio="16/9"
+					/>
+				{/if}
 				<h2>{post.name}<span class="arrow">-></span></h2>
 				<div class="description">{post.description}</div>
 			</a>

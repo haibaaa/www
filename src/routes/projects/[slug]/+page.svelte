@@ -50,23 +50,25 @@
 			{metadata.description}
 		</p>
 	</div>
-	<div class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={emblaInit}>
-		<div class="embla__container" class:loop>
-			{#each metadata.images as image, index}
-				<div class="embla__slide" class:tall={metadata.aspect_ratio === 'tall'}>
-					<Image
-						{image}
-						alt={metadata.description}
-						sizes="(min-width: 800px) 80vw, 100vw"
-						loading={index === 0 ? 'eager' : 'lazy'}
-						fetchpriority={index === 0 ? 'high' : 'auto'}
-					/>
-				</div>
-			{/each}
+	{#if metadata.images?.length}
+		<div class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={emblaInit}>
+			<div class="embla__container" class:loop>
+				{#each metadata.images as image, index}
+					<div class="embla__slide" class:tall={metadata.aspect_ratio === 'tall'}>
+						<Image
+							{image}
+							alt={metadata.description}
+							sizes="(min-width: 800px) 80vw, 100vw"
+							loading={index === 0 ? 'eager' : 'lazy'}
+							fetchpriority={index === 0 ? 'high' : 'auto'}
+						/>
+					</div>
+				{/each}
+			</div>
+			<button class="embla__prev" onclick={emblaPrev}><span>&lt;-</span></button>
+			<button class="embla__next" onclick={emblaNext}><span>-></span></button>
 		</div>
-		<button class="embla__prev" onclick={emblaPrev}><span>&lt;-</span></button>
-		<button class="embla__next" onclick={emblaNext}><span>-></span></button>
-	</div>
+	{/if}
 	<div class="content">
 		<Content />
 	</div>
