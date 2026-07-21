@@ -1,12 +1,13 @@
 <script>
-	import DiscordIcon from '~icons/ph/discord-logo';
+	import GithubIcon from '~icons/ph/github-logo';
 	import EmailIcon from '~icons/ph/envelope';
+	import PhoneIcon from '~icons/ph/phone';
 	import CopyIcon from '~icons/ph/copy';
 	import CheckIcon from '~icons/ph/check';
 
 	let status = $state('submit ->');
 	let emailCopied = $state(false);
-	let discordCopied = $state(false);
+	let phoneCopied = $state(false);
 
 	const handleSubmit = async (data) => {
 		data.preventDefault();
@@ -33,15 +34,15 @@
 	};
 
 	const copyEmail = async () => {
-		await navigator.clipboard.writeText('refact0r.contact@gmail.com');
+		await navigator.clipboard.writeText('9700samarth@gmail.com');
 		emailCopied = true;
 		setTimeout(() => (emailCopied = false), 1000);
 	};
 
-	const copyDiscord = async () => {
-		await navigator.clipboard.writeText('refact0r');
-		discordCopied = true;
-		setTimeout(() => (discordCopied = false), 1000);
+	const copyPhone = async () => {
+		await navigator.clipboard.writeText('+91-88005-76791');
+		phoneCopied = true;
+		setTimeout(() => (phoneCopied = false), 1000);
 	};
 </script>
 
@@ -50,8 +51,8 @@
 	<p>ways to get in touch.</p>
 	<div class="info">
 		<EmailIcon />email <span class="sub">-></span>
-		<a href="mailto:refact0r.contact@gmail.com" class="external"
-			>refact0r.contact@gmail.com<span class="arrow">/></span>
+		<a href="mailto:9700samarth@gmail.com" class="external"
+			>9700samarth@gmail.com<span class="arrow">/></span>
 		</a>
 		<button class="copy-btn" onclick={copyEmail} aria-label="Copy email">
 			{#if emailCopied}
@@ -62,17 +63,23 @@
 		</button>
 	</div>
 	<div class="info">
-		<DiscordIcon />discord <span class="sub">-></span>
-		<a href="https://discord.com/users/508863359777505290" class="external"
-			>refact0r<span class="arrow">/></span>
+		<PhoneIcon />phone <span class="sub">-></span>
+		<a href="tel:+918800576791" class="external"
+			>+91-88005-76791<span class="arrow">/></span>
 		</a>
-		<button class="copy-btn" onclick={copyDiscord} aria-label="Copy Discord username">
-			{#if discordCopied}
+		<button class="copy-btn" onclick={copyPhone} aria-label="Copy phone number">
+			{#if phoneCopied}
 				<CheckIcon />
 			{:else}
 				<CopyIcon />
 			{/if}
 		</button>
+	</div>
+	<div class="info">
+		<GithubIcon />github <span class="sub">-></span>
+		<a href="https://github.com/haibaaa" class="external"
+			>haibaaa<span class="arrow">/></span>
+		</a>
 	</div>
 	<br />
 	<br />

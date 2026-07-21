@@ -43,7 +43,10 @@ const config = {
 		paths: {
 			relative: false
 		},
-		inlineStyleThreshold: Infinity
+		inlineStyleThreshold: Infinity,
+		prerender: {
+			handleUnseenRoutes: 'ignore'
+		}
 	}
 };
 

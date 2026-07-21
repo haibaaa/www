@@ -2,7 +2,7 @@ export function load() {
 	return {
 		meta: {
 			title: 'about',
-			description: 'info about me.'
+			description: 'about samarth patel.'
 		}
 	};
 }

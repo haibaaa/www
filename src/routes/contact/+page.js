@@ -2,7 +2,7 @@ export function load() {
 	return {
 		meta: {
 			title: 'contact',
-			description: 'ways to get in touch.'
+			description: 'get in touch with samarth.'
 		}
 	};
 }

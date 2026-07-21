@@ -5,12 +5,12 @@
 <main>
 	<div class="container">
 		<div class="row">
-			<h1>refact0r</h1>
+			<h1>haibaaa</h1>
 			<div class="logo">
 				<LogoAnimated />
 			</div>
 		</div>
-		<p>hey there! i'm yifan, a cs student interested in ai, web dev, design, and more.</p>
+		<p>hey there! i'm samarth, a cs student at shiv nadar institute of eminence.</p>
 		<nav>
 			<a class="nav" href="/about">
 				<span class="arrow">-></span><span class="slash">/</span>about
@@ -20,9 +20,6 @@
 			</a>
 			<a class="nav" href="/blog">
 				<span class="arrow">-></span><span class="slash">/</span>blog
-			</a>
-			<a class="nav" href="/pics">
-				<span class="arrow">-></span><span class="slash">/</span>pics
 			</a>
 			<a class="nav" href="/contact">
 				<span class="arrow">-></span><span class="slash">/</span>contact

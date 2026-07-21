@@ -10,7 +10,7 @@ export async function load() {
 		posts,
 		meta: {
 			title: 'blog',
-			description: 'posts about various topics.'
+			description: 'posts about devops and infrastructure.'
 		}
 	};
 }

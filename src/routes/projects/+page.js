@@ -11,7 +11,7 @@ export async function load() {
 		posts,
 		meta: {
 			title: 'projects',
-			description: "projects i've worked on."
+			description: "samarth's projects."
 		}
 	};
 }

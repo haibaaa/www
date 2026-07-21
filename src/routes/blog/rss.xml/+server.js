@@ -8,12 +8,12 @@ export async function GET() {
 
 	posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-	const siteUrl = 'https://refact0r.dev'; // Replace with your actual domain
+	const siteUrl = 'https://haibaaa.dev'; // Replace with your actual domain
 	const rssContent = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>refact0r's blog</title>
-		<description>posts about various topics.</description>
+		<title>haibaaa's blog</title>
+		<description>devops, automation, and infrastructure.</description>
 		<link>${siteUrl}/blog</link>
 		<atom:link href="${siteUrl}/blog/rss.xml" rel="self" type="application/rss+xml" />
 		<language>en-us</language>
