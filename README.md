@@ -1,4 +1,4 @@
-portfolio <https://haibaaa.dev](https://www-85f.pages.dev>.
+portfolio <[https://www-85f.pages.dev]>.
 
 built with sveltekit & mdsvex, deployed on cloudflare pages.
 
