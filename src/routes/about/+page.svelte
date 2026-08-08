@@ -17,7 +17,7 @@
 <main>
 	<h1>about</h1>
 	<p>
-        hey there! i'm samarth, a cs student at shiv nadar institute of eminence. interested in devops, automation, and infrastructure.
+        hey there! i'm samarth, a cs student at shiv nadar institute of eminence. interested in software development, devops, automation, and infrastructure.
 	</p>
 	<h2>links</h2>
 	<div class="links">
